@@ -1,0 +1,18 @@
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def createListNode(l):
+    new = ListNode()
+    t = new
+    for i in l:
+        p = ListNode(i)
+        t.next = p
+        t = p
+    return new.next
+
+def printListNode(p):
+    while p is not None:
+        print(p.val)
+        p = p.next
